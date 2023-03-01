@@ -1,0 +1,9 @@
+{
+    "require": {
+        "jajo/jsondb": "^3.0"
+    },
+    "autoload": {
+        "classmap": ["controllers"]
+    }
+    
+}

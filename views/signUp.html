@@ -1,0 +1,61 @@
+<div class="container">
+  <form id="signup_form" method="POST">
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input type="text" class="form-control" name="name">
+      <p>
+        <?php 
+      if(isset($_SESSION['errors']['name']))
+      echo $_SESSION['errors']['name']
+      ?>
+      </p>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Login</label>
+      <input type="text" class="form-control" name="login">
+      <p>
+        <?php 
+        if(isset($_SESSION['errors']['login']))
+        echo $_SESSION['errors']['login']
+        ?>
+      </p>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Email address</label>
+      <input type="email" class="form-control" name="email">
+      <p>
+        <?php 
+        if(isset($_SESSION['errors']['email']))
+        echo $_SESSION['errors']['email']
+        ?>
+      </p>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Password</label>
+      <input type="password" class="form-control" name="password">
+      <p>
+        <?php 
+        if(isset($_SESSION['errors']['password']))
+        echo $_SESSION['errors']['password']
+        ?>
+      </p>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Confirm password</label>
+      <input type="password" class="form-control" name="confirmPassword">
+      <p>
+        <?php 
+        if(isset($_SESSION['errors']['match']))
+        echo $_SESSION['errors']['match']
+        ?>
+      </p>
+    </div>
+    <button type="submit" id="submitBtn" name="submitSignUp" class="btn btn-primary">Submit</button>
+  </form>
+  <p>
+    <?php 
+    if(isset($_SESSION['errors']['unique']))
+    echo $_SESSION['errors']['unique']
+    ?>
+  </p>
+</div>

@@ -1,0 +1,25 @@
+[
+    {
+        "login": "nikita",
+        "name": "Nikita",
+        "password": "0b3351624c3b4c3fbd33d6ddeff0861c",
+        "email": "nikita@gmail.com",
+        "salt": "J,f8\\_%1"
+    }
+,
+    {
+        "login": "qweqweqweqw",
+        "name": "qweqweqwe",
+        "password": "20c9b9743ed2336d425a9281b305bafe",
+        "email": "mark@mail.com",
+        "salt": "B&{\/+1o,"
+    }
+,
+    {
+        "login": "badick",
+        "name": "Vadim",
+        "password": "67681a9da083ef5e522819a1795fa151",
+        "email": "vadim@mail.com",
+        "salt": "U]<D@ocq"
+    }
+]

@@ -1,0 +1,26 @@
+<div class="container">
+  <form id="signin_form" method="POST">
+    <div class="mb-3">
+      <label class="form-label">Login</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" name="login">
+      <p>
+        <?php 
+        if(isset($_SESSION['errors']['login']))
+        echo $_SESSION['errors']['login']
+        ?>
+      </p>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+      <p>
+        <?php 
+        if(isset($_SESSION['errors']['password']))
+        echo $_SESSION['errors']['password']
+        ?>
+      </p>
+    </div>
+    <input type="password" class="form-control d-none" id="exampleInputPassword1" name="signInCheck">
+    <button type="submit" id="submitBtn" name="submitSignIn" class="btn btn-primary">Submit</button>
+  </form>
+</div>
