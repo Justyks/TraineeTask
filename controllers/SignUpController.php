@@ -48,7 +48,7 @@ class SignUpController
             case stristr($user['login']," "):
                 $this->errors['login'] = 'invalid login: can\'t containt spaces';
                 return false;
-            case strlen($user['password']) < 6 || preg_match('#[a-z0-9]+#', $user['password']) != 1 || stristr($user['password']," "):
+            case preg_match('#^(?=.*[a-zA-z])(?=.*\d)[a-zA-Z\d]{6,}$#', $user['password']) != 1 || stristr($user['password']," "):
                 $this->errors['password'] = 'invalid password: min 6 characters and must contain only letters and digits';
                 return false;
             case !filter_var($user['email'], FILTER_VALIDATE_EMAIL):
